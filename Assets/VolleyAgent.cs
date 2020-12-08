@@ -12,8 +12,8 @@ public class VolleyAgent : Agent
     private Rigidbody body;
 
     [Header("Starting Area")]
-    public Vector2 minRandom;
-    public Vector2 maxRandom;
+    public Vector2 randomX;
+    public Vector2 randomZ;
 
     private void Start()
     {
@@ -23,9 +23,9 @@ public class VolleyAgent : Agent
 
     public override void OnEpisodeBegin()
     {
-        transform.localPosition = new Vector3(Random.Range(minRandom.x, minRandom.y),
+        transform.localPosition = new Vector3(Random.Range(randomX.x, randomX.y),
                                               1.5f,
-                                              Random.Range(maxRandom.x, maxRandom.y));
+                                              Random.Range(randomZ.x, randomZ.y));
 
         body.angularVelocity = Vector3.zero;
         body.velocity        = Vector3.zero;
@@ -35,8 +35,8 @@ public class VolleyAgent : Agent
         targetBody.velocity        = Vector3.zero;
         do
         {
-            target.position = new Vector3(Random.Range(-2, 2),
-                                          Random.Range(5, 8),
+            target.localPosition = new Vector3(Random.Range(-2, 2),
+                                          Random.Range(8, 15),
                                           Random.Range(-7, 7));
         } while (target.position.z == 0);
     }

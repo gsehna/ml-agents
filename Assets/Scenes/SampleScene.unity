@@ -256,9 +256,9 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
   target: {fileID: 425815675}
-  forceMultiplier: 50
-  minRandom: {x: -2, y: 3}
-  maxRandom: {x: 2, y: 7}
+  forceMultiplier: 30
+  randomX: {x: -2, y: 2}
+  randomZ: {x: 3, y: 7}
 --- !u!114 &35265034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,10 +277,10 @@ MonoBehaviour:
     VectorActionSize: 02000000
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: 100fb72793dfd3349a5168a6d498e5d9, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
-  m_BehaviorName: Volley
+  m_BehaviorName: BlueVolley
   TeamId: 0
   m_UseChildSensors: 1
 --- !u!114 &35265035
@@ -430,9 +430,9 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
   target: {fileID: 425815675}
-  forceMultiplier: 50
-  minRandom: {x: -2, y: -3}
-  maxRandom: {x: 2, y: -7}
+  forceMultiplier: 30
+  randomX: {x: -2, y: 2}
+  randomZ: {x: -7, y: -3}
 --- !u!114 &83983422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,10 +451,10 @@ MonoBehaviour:
     VectorActionSize: 02000000
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: 854e4cc338688e04fa04f52a92262be2, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
-  m_BehaviorName: Volley
+  m_BehaviorName: RedVolley
   TeamId: 0
   m_UseChildSensors: 1
 --- !u!114 &83983423
@@ -499,7 +499,7 @@ Transform:
   m_GameObject: {fileID: 248368897}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.75, z: 0}
-  m_LocalScale: {x: 10, y: 2.5, z: 0.1}
+  m_LocalScale: {x: 20, y: 2.5, z: 0.1}
   m_Children: []
   m_Father: {fileID: 1697829535}
   m_RootOrder: 3
@@ -693,6 +693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   redAgent: {fileID: 83983421}
   blueAgent: {fileID: 35265033}
+  throwForce: 4
 --- !u!1 &629270656
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,13 +874,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &789654800
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,7 +994,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &802336059
 Transform:
   m_ObjectHideFlags: 0
@@ -1336,8 +1337,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: -0.2431284, y: 0.66208476, z: -0.24154511, w: -0.66647464}
+  m_LocalPosition: {x: 19.795979, y: 19.00484, z: -1.2502518}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1432,8 +1433,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 980710575}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -5}
-  m_LocalScale: {x: 10, y: 1, z: 10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 20, y: 1, z: 20}
   m_Children: []
   m_Father: {fileID: 1697829535}
   m_RootOrder: 0
@@ -1507,8 +1508,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2068214718}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 10, y: 1, z: 10}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalScale: {x: 20, y: 1, z: 20}
   m_Children: []
   m_Father: {fileID: 1697829535}
   m_RootOrder: 1
